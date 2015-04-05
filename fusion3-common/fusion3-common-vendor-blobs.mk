@@ -81,6 +81,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/fusion3-common/proprietary/etc/firmware/wcnss.mdt:system/etc/firmware/wcnss.mdt \
     vendor/sony/fusion3-common/proprietary/etc/firmware/wlan/prima/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     vendor/sony/fusion3-common/proprietary/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
+    vendor/sony/fusion3-common/proprietary/lib/egl/libGLES_android.so:system/lib/egl/libGLES_android.so \
     vendor/sony/fusion3-common/proprietary/lib/hw/camera.vendor.qcom.so:system/lib/hw/camera.vendor.qcom.so \
     vendor/sony/fusion3-common/proprietary/lib/hw/gps.default.so:system/lib/hw/gps.default.so \
     vendor/sony/fusion3-common/proprietary/lib/hw/lights.vendor.default.so:system/lib/hw/lights.vendor.default.so \
@@ -103,13 +104,13 @@ PRODUCT_COPY_FILES += \
     vendor/sony/fusion3-common/proprietary/lib/libdrmdiag.so:system/lib/libdrmdiag.so \
     vendor/sony/fusion3-common/proprietary/lib/libdrmfs.so:system/lib/libdrmfs.so \
     vendor/sony/fusion3-common/proprietary/lib/libdsi_netctrl.so:system/lib/libdsi_netctrl.so \
+    vendor/sony/fusion3-common/proprietary/lib/libdsnetutils.so:system/lib/libdsnetutils.so \
     vendor/sony/fusion3-common/proprietary/lib/libdsutils.so:system/lib/libdsutils.so \
     vendor/sony/fusion3-common/proprietary/lib/libface.so:system/lib/libface.so \
     vendor/sony/fusion3-common/proprietary/lib/libfmradio.so:system/lib/libfmradio.so \
     vendor/sony/fusion3-common/proprietary/lib/libfmradio.sony-iris.so:system/lib/libfmradio.sony-iris.so \
     vendor/sony/fusion3-common/proprietary/lib/libgemini.so:system/lib/libgemini.so \
     vendor/sony/fusion3-common/proprietary/lib/libgps.utils.so:system/lib/libgps.utils.so \
-    vendor/sony/fusion3-common/proprietary/lib/libgsl.so:system/lib/libgsl.so \
     vendor/sony/fusion3-common/proprietary/lib/libidd.so:system/lib/libidd.so \
     vendor/sony/fusion3-common/proprietary/lib/libidl.so:system/lib/libidl.so \
     vendor/sony/fusion3-common/proprietary/lib/libimage-jpeg-dec-omx-comp.so:system/lib/libimage-jpeg-dec-omx-comp.so \
@@ -145,7 +146,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/fusion3-common/proprietary/lib/libmmstillomx.so:system/lib/libmmstillomx.so \
     vendor/sony/fusion3-common/proprietary/lib/libmpl.so:system/lib/libmpl.so \
     vendor/sony/fusion3-common/proprietary/lib/libnetmgr.so:system/lib/libnetmgr.so \
-    vendor/sony/fusion3-common/proprietary/lib/liboemcrypto.so:system/lib/liboemcrypto.so \
     vendor/sony/fusion3-common/proprietary/lib/libpin-cache.so:system/lib/libpin-cache.so \
     vendor/sony/fusion3-common/proprietary/lib/libprotobuf-c.so:system/lib/libprotobuf-c.so \
     vendor/sony/fusion3-common/proprietary/vendor/lib/libqc-opt.so:system/vendor/lib/libqc-opt.so \
@@ -222,31 +222,32 @@ PRODUCT_COPY_FILES += \
     vendor/sony/fusion3-common/proprietary/vendor/lib/egl/libEGL_adreno.so:system/vendor/lib/egl/libEGL_adreno.so \
     vendor/sony/fusion3-common/proprietary/vendor/lib/egl/libGLESv1_CM_adreno.so:system/vendor/lib/egl/libGLESv1_CM_adreno.so \
     vendor/sony/fusion3-common/proprietary/vendor/lib/egl/libGLESv2_adreno.so:system/vendor/lib/egl/libGLESv2_adreno.so \
-    vendor/sony/fusion3-common/proprietary/vendor/lib/egl/libplayback_adreno.so:system/vendor/lib/egl/libplayback_adreno.so \
+    vendor/sony/fusion3-common/proprietary/vendor/lib/egl/libGLESv2S3D_adreno.so:system/vendor/lib/egl/libGLESv2S3D_adreno.so \
     vendor/sony/fusion3-common/proprietary/vendor/lib/egl/libq3dtools_adreno.so:system/vendor/lib/egl/libq3dtools_adreno.so \
-    vendor/sony/fusion3-common/proprietary/vendor/lib/libC2D2.so:system/vendor/lib/libC2D2.so \
-    vendor/sony/fusion3-common/proprietary/vendor/lib/libCB.so:system/vendor/lib/libCB.so \
-    vendor/sony/fusion3-common/proprietary/vendor/lib/libRSDriver_adreno.so:system/vendor/lib/libRSDriver_adreno.so \
     vendor/sony/fusion3-common/proprietary/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
     vendor/sony/fusion3-common/proprietary/vendor/lib/libWVphoneAPI.so:system/vendor/lib/libWVphoneAPI.so \
     vendor/sony/fusion3-common/proprietary/vendor/lib/libadreno_utils.so:system/vendor/lib/libadreno_utils.so \
-    vendor/sony/fusion3-common/proprietary/vendor/lib/libbccQTI.so:system/vendor/lib/libbccQTI.so \
-    vendor/sony/fusion3-common/proprietary/vendor/lib/libc2d30-a3xx.so:system/vendor/lib/libc2d30-a3xx.so \
-    vendor/sony/fusion3-common/proprietary/vendor/lib/libc2d30.so:system/vendor/lib/libc2d30.so \
+    vendor/sony/fusion3-common/proprietary/vendor/lib/libC2D2.so:system/vendor/lib/libC2D2.so \
+    vendor/sony/fusion3-common/proprietary/vendor/lib/libc2d2_a3xx.so:system/vendor/lib/libc2d2_a3xx.so \
+    vendor/sony/fusion3-common/proprietary/vendor/lib/libc2d2_z180.so:system/vendor/lib/libc2d2_z180.so \
+    vendor/sony/fusion3-common/proprietary/vendor/lib/libCB.so:system/vendor/lib/libCB.so \
     vendor/sony/fusion3-common/proprietary/vendor/lib/libdiag.so:system/vendor/lib/libdiag.so \
     vendor/sony/fusion3-common/proprietary/vendor/lib/libdrmdecrypt.so:system/vendor/lib/libdrmdecrypt.so \
     vendor/sony/fusion3-common/proprietary/vendor/lib/libgeofence.so:system/vendor/lib/libgeofence.so \
     vendor/sony/fusion3-common/proprietary/vendor/lib/libgsl.so:system/vendor/lib/libgsl.so \
     vendor/sony/fusion3-common/proprietary/vendor/lib/libizat_core.so:system/vendor/lib/libizat_core.so \
     vendor/sony/fusion3-common/proprietary/vendor/lib/liblbs_core.so:system/vendor/lib/liblbs_core.so \
-    vendor/sony/fusion3-common/proprietary/vendor/lib/libllvm-qcom.so:system/vendor/lib/libllvm-qcom.so \
+    vendor/sony/fusion3-common/proprietary/vendor/lib/libllvm-a3xx.so:system/vendor/lib/libllvm-a3xx.so \
+    vendor/sony/fusion3-common/proprietary/vendor/lib/libllvm-arm.so:system/vendor/lib/libllvm-arm.so \
+    vendor/sony/fusion3-common/proprietary/vendor/lib/libOpenCL.so:system/vendor/lib/libOpenCL.so \
+    vendor/sony/fusion3-common/proprietary/vendor/lib/libOpenVG.so:system/vendor/lib/libOpenVG.so \
     vendor/sony/fusion3-common/proprietary/vendor/lib/libqmi_cci.so:system/vendor/lib/libqmi_cci.so \
     vendor/sony/fusion3-common/proprietary/vendor/lib/libqmi_common_so.so:system/vendor/lib/libqmi_common_so.so \
     vendor/sony/fusion3-common/proprietary/vendor/lib/libqmi_csi.so:system/vendor/lib/libqmi_csi.so \
     vendor/sony/fusion3-common/proprietary/vendor/lib/libqmi_encdec.so:system/vendor/lib/libqmi_encdec.so \
-    vendor/sony/fusion3-common/proprietary/vendor/lib/librs_adreno.so:system/vendor/lib/librs_adreno.so \
-    vendor/sony/fusion3-common/proprietary/vendor/lib/librs_adreno_sha1.so:system/vendor/lib/librs_adreno_sha1.so \
-    vendor/sony/fusion3-common/proprietary/vendor/lib/libsc-a3xx.so:system/vendor/lib/libsc-a3xx.so \
     vendor/sony/fusion3-common/proprietary/vendor/lib/libwvdrm_L1.so:system/vendor/lib/libwvdrm_L1.so \
     vendor/sony/fusion3-common/proprietary/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
-    vendor/sony/fusion3-common/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so
+    vendor/sony/fusion3-common/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so \
+    vendor/sony/fusion3-common/proprietary/vendor/lib/libqmi_encdec.so:system/vendor/lib/libqmi_encdec.so \
+    vendor/sony/fusion3-common/proprietary/vendor/lib/libsc-a2xx.so:system/vendor/lib/libsc-a2xx.so \
+    vendor/sony/fusion3-common/proprietary/vendor/lib/libsc-a3xx.so:system/vendor/lib/libsc-a3xx.so
